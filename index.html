@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="msapplication-TileColor" content="#0250c4">
+  <meta name="theme-color" content="#0250c4">
+  <!-- Untuk Windows -->
+  <meta name="msapplication-TileColor" content="#0250c4">
+  <title>Disiplin Kehadiran Kegiatan Rapat Koordinasi Internal Ditjen GTKPG (Rapim B) Tahap I Tahun 2025</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://i.ibb.co.com/tmK6GSZ/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co.com/F7TzwCP/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co.com/D70CCD8/favicon-16x16.png">
+  <!-- Untuk iOS -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- jQuery, jQuery UI, dan Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <!-- Memuat html2canvas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <!-- you load jquery somewhere before jSignature ... -->
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jSignature/2.1.3/jSignature.min.js></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jSignature/2.1.3/flashcanvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jSignature/2.1.3/jSignature.min.noconflict.js"></script>
+  
+  <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+
+  <!-- jQuery UI CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+  <style>
+    /* Penyesuaian tampilan autocomplete agar serasi dengan Bootstrap */
+    .ui-autocomplete {
+      z-index: 1051; /* Pastikan di atas elemen Bootstrap lainnya seperti modal */
+      background-color: #fff;
+      border: 1px solid #ced4da;
+      border-radius: 0.375rem;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .ui-menu-item-wrapper {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+
+    .ui-menu-item-wrapper {
+      text-align: left !important;
+    }
+
+    .ui-menu-item-wrapper.ui-state-active {
+      background-color: #0d6efd;
+      color: #fff;
+    }
+  </style>
+  
+  <!-- Manifest in a <script> block -->
+  <link
+    rel="manifest"
+    href="data:application/manifest+json,{'name':'Simple PWA','short_name':'PWA','start_url':'/ftp.php','display':'standalone','background_color':'#ffffff','theme_color':'#000000','icons':[{'src':'https://via.placeholder.com/192','sizes':'192x192','type':'image/png'},{'src':'https://via.placeholder.com/512','sizes':'512x512','type':'image/png'}]}" />
+
+  <style>
+    body {
+      font-family: 'SF Pro Display', sans-serif;                                                                       
+      font-size: 14px;
+      /* Atur ukuran font untuk seluruh teks di body */
+      padding: 20px;
+      text-align: center;
+    }
+
+    helptext {
+      font-size: 9px;
+      color: #666;
+
+    }
+
+    h1 {
+      color: #333;
+    }
+  </style>
+
+  <script>
+    $(document).ready(function() {
+
+      $(document).on("contextmenu", function(event) {
+        event.preventDefault(); // Mencegah menu konteks muncul
+      });
+
+      const instansi = [
+        "Direktorat Guru PAUD-PNF",
+        "Direktorat Guru Dikdas",
+        "Direktorat Guru Dikmen-Diksus",
+        "Direktorat KSPS-Tendik",
+        "Direktorat PPG",
+        "BBGP Provinsi Jawa Barat",
+        "BBGP Provinsi Jawa Tengah",
+        "BBGP Provinsi D.I. Yogyakarta",
+        "BBGP Provinsi Jawa Timur",
+        "BBGP Provinsi Sumatera Utara",
+        "BBGP Provinsi Sulawesi Selatan",
+        "BGP Provinsi Aceh",
+        "BGP Provinsi Sumatera Selatan",
+        "BGP Provinsi Riau",
+        "BGP Provinsi Sumatera Barat",
+        "BGP Provinsi Jambi",
+        "BGP Provinsi Lampung",
+        "BGP Provinsi Banten",
+        "BGP Provinsi Bali",
+        "BGP Provinsi NTB",
+        "BGP Provinsi NTT",
+        "BGP Provinsi Kalimantan Barat",
+        "BGP Provinsi Kalimantan Tengah",
+        "BGP Provinsi Kalimantan Selatan",
+        "BGP Provinsi Kalimantan Timur",
+        "BGP Provinsi Sulawesi Utara",
+        "BGP Provinsi Sulawesi Tengah",
+        "BGP Provinsi Sulawesi Tenggara",
+        "BGP Provinsi Maluku",
+        "BGP Provinsi Papua",
+        "BGP Provinsi Papua Barat",
+        "BGP Provinsi Kep. Bangka Belitung",
+        "BGP Provinsi Kep. Riau",
+        "BGP Provinsi Gorontalo",
+        "BGP Provinsi Bengkulu",
+        "BGP Provinsi Kalimantan Utara",
+        "BGP Provinsi Sulawesi Barat",
+        "BGP Provinsi Maluku Utara",
+        "BGP DKI Jakarta",
+        "Ketua Tim Kerja di lingkungan Setditjen GTKPG"
+      ];
+
+      $("#instansiPegawai").autocomplete({
+        source: instansi,
+        minLength: 2, // Mulai muncul saat minimal 2 karakter diketik
+        delay: 100 // Waktu delay pencarian (ms)
+      });
+
+       const jabatan = [
+        "Kabag Umum",
+        "Kasubbag Umum",
+        "Kasubbag TU",
+        "PPK"
+      ];
+
+      $("#jabatanPegawai").autocomplete({
+        source: jabatan,
+        minLength: 1, // Autocomplete aktif setelah 1 karakter diketik
+        delay: 100 // Waktu jeda pencarian (ms)
+      });
+
+      let dataDummy = {
+        id_pertemuan: 99,
+        nama_pertemuan: "Strategi Pelaksanaan Program Ditjen GTKPG Paska Kebijakan Efisiensi Anggaran Tahun 2025",
+        tanggal: "2025-02-24",
+        status: "aktif"
+       };
+
+      tampilKegiatan(dataDummy);
+
+      $("#nameInput").on("input", function() {
+        const nameValue = $(this).val();
+        $(".uname").text("Selamat datang Bpk/Ibu, "+nameValue); // Set nilai uname sesuai dengan nameInput
+      });
+
+      var $sigdiv;
+
+      $("#clear").click(function () {
+          $sigdiv.jSignature("reset");
+          $("#someelement").html("");
+          $("#svgTextArea").val("");
+      });
+
+      $("#save").click(function () {
+          var datapair = $sigdiv.jSignature("getData", "svgbase64");
+          var i = new Image();
+          i.src = "data:" + datapair[0] + "," + datapair[1];
+          $("#someelement").html(i); // Append the signature image
+
+          var svgText = atob(datapair[1]); // Decode Base64 ke teks SVG
+
+          $("#svgTextArea").val(svgText); // Masukkan ke textarea
+
+          savePresensi(); // Simpan data kehadiran
+          
+      });
+
+      const url = "https://script.google.com/macros/s/AKfycbxU13l4ozk0PDfS4If4e2ssHofF1Lh51Btlv31Mqccg-_UdR1oyZcrdhkGJmZpVYWfTeg/exec"; // Ganti dengan URL Web App Anda  
+
+      // Inisialisasi variabel untuk langkah saat ini
+      let currentStep = 1;
+
+      // Tampilkan step pertama saat halaman dimuat
+      showStep();
+
+      // Fungsi untuk mendapatkan data kegiatan menggunakan fetch
+      function getKegiatan() {
+        const url = 'https://script.google.com/macros/s/AKfycbwvEuVg0otuL2zIRtqPYl6qrvBMF6pAG_PmUSrJ7Ow6jDuijCj8K0-2I55QlLxqZ8DDHA/exec?type=kegiatan';
+
+        // Menggunakan fetch dengan metode GET
+        return fetch(url, {
+            redirect: "follow",
+            method: "GET",
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8", // Header sesuai permintaan
+            },
+          })
+          .then(response => response.json()) // Parsing response menjadi JSON
+          .then(data => data.kegiatanData) // Mengembalikan data tema
+          .catch(error => {
+            console.error('Error:', error);
+            swal('Terjadi Kesalahan', 'Gagal mengambil data kegiatan.', 'error');
+            return []; // Kembalikan array kosong jika terjadi error
+          });
+      }
+
+      // Fungsi untuk menampilkan langkah tertentu dan memperbarui stepper
+      function showStep() {
+        // Sembunyikan semua step
+        $("#step1, #step2, #step3").hide();
+        $(".nav-link").removeClass("active"); // Hapus status aktif dari semua link
+
+        // Menentukan langkah yang aktif
+        if (currentStep === 1) {
+          $("#step1").show();
+          updateStepLink("#step1Link", true, "ID");
+        } else if (currentStep === 2) {
+          $("#step2").show();
+          updateStepLink("#step2Link", true, "PERTEMUAN");
+          updateStepLink("#step1Link", false, "1"); // Menghapus status aktif dari step 1
+        } else if (currentStep === 3) {
+          $("#step3").show();
+          updateStepLink("#step3Link", true, "TANDA TANGAN");
+          updateStepLink("#step2Link", false, "2"); // Menghapus status aktif dari step 2
+        }
+      }
+
+      // Fungsi untuk memperbarui status link langkah
+      function updateStepLink(stepId, isActive, label) {
+        $(stepId).toggleClass("active", isActive); // Menetapkan kelas aktif
+        if (isActive) {
+          $(stepId).html(
+            `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/></svg> <span style="color: white;">${label}</span>`
+          );
+        } else {
+          $(stepId).html(
+            `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/></svg> <span style="color: white;"></span>`
+          );
+        } 
+      }
+
+      // Fungsi untuk menampilkan data pengguna di halaman (Step 2)
+      function displayUserData(userData) {
+
+        $("#nameInput").val(userData.nama); // Nama pengguna
+        // Ambil nama depan dari userData.nama
+        var namaLengkap = userData.nama;
+        var namaDepan = namaLengkap.split(' ')[0]; // Pisahkan nama berdasarkan spasi dan ambil nama pertama
+
+        // Ambil nama depan dari userData.nama        
+
+        // Panggil API Genderize.io (atau yang sejenis) untuk menebak gender
+        $.ajax({
+          url: "https://api.genderize.io",
+          type: "GET",
+          data: {
+            name: namaDepan
+          },
+          success: function(response) {
+            console.log("Nama: " + namaDepan);
+            console.log("Kemungkinan gender: " + response.gender);
+
+            // Update avatar berdasarkan gender yang terdeteksi
+            var avatarUrl = "";
+            if (response.gender === "male") {
+              avatarUrl = "https://avatar.iran.liara.run/public/boy"; // Avatar laki-laki
+            } else if (response.gender === "female") {
+              avatarUrl = "https://avatar.iran.liara.run/public/girl"; // Avatar perempuan
+            } else {
+              avatarUrl = "https://avatar.iran.liara.run/public"; // Avatar default
+            }
+
+            // Ubah src dari gambar avatar
+            $(".avimg").attr("src", avatarUrl);
+          },
+          error: function(error) {
+            console.log("Error:", error);
+          }
+        });
+
+        // Tampilkan nama depan di elemen dengan class "uname"
+        $(".uname").text("Hai kak, " + namaDepan);
+
+        // Convert the userData.jabatan to lower case for comparison
+        var userJabatan = userData.jabatan.toLowerCase();
+
+        // Loop through the options to find a match
+        $("#positionInput option").each(function() {
+          // Compare the option value in lower case
+          if ($(this).val().toLowerCase() === userJabatan) {
+            $("#positionInput").val($(this).val()); // Set the value if match found
+            return false; // Exit the loop
+          }
+        })
+
+        $("#generationInput").val(userData.peran); // Angkatan atau peran
+        $("#institutionInput").val(userData.instansi); // Instansi (editable)
+        $("#districtInput").val(userData.kabupaten); // Kabupaten        
+
+        // Data mapping jenjang to options
+        const jenjangMap = {
+          "01. PAUD/TK": "Taman Kanak-Kanak (TK)",
+          "02. SD": "Sekolah Dasar (SD)",
+          "03. SMP": "Sekolah Menengah Pertama (SMP)",
+          "04. SMA": "Sekolah Menengah Atas (SMA)",
+          "05. SMK": "Sekolah Menengah Kejuruan (SMK)"
+        };
+
+        // Cek apakah userData.jenjang ada di mapping
+        if (jenjangMap[userData.jenjang]) {
+          $("#schoolLevelInput").val(jenjangMap[userData.jenjang]); // Set input dengan jenjang yang sesuai
+        } else {
+          // Jika jenjang tidak ditemukan, bisa ditambahkan aksi lain misalnya alert atau default value
+          $("#schoolLevelInput").val(''); // Kosongkan input jika tidak cocok
+        }
+
+        // Datalist for Autocomplete
+        const datalistHtml = `
+          <datalist id="schoolLevelList">
+            <option value="Taman Kanak-Kanak (TK)">
+            <option value="Sekolah Dasar (SD)">
+            <option value="Sekolah Menengah Pertama (SMP)">
+            <option value="Sekolah Menengah Atas (SMA)">
+            <option value="Sekolah Menengah Kejuruan (SMK)">
+            <option value="Madrasah Ibtidaiyah (MI)">
+            <option value="Madrasah Tsanawiyah (MTs)">
+            <option value="Madrasah Aliyah (MA)">
+            <option value="Pendidikan Anak Usia Dini (PAUD)">
+            <option value="Sekolah Luar Biasa (SLB)">
+            <option value="Perguruan Tinggi">
+          </datalist>
+        `;
+
+        // Masukkan datalist ke dalam DOM (jika diperlukan)
+        $("#schoolLevelInput").after(datalistHtml);
+
+        // Pastikan inputan tambahan kosong (jika diinginkan)
+        $("#whatsappInput").val(userData.nomor_whatsapp); // Nomor WhatsApp (editable)
+        $("#bankNameInput").val("");
+        $("#accountNumberInput").val("");
+        $("#accountNameInput").val(userData.nama);
+        $("#kodeKegiatanInput").val(userData.jumlah_kegiatan);
+
+      }
+
+      // Fungsi untuk menampilkan data registrasi di halaman (Step 2)
+      function displayUserDataRegistrasi(userDataRegistrasi, userData) {
+
+        $("#nameInput").val(userData.nama); // Nama pengguna
+        $(".uname").text("Hai kak, " + userData.nama); // Nama pengguna
+
+        generateQRCode(userData.nuptk); // Generate QR code
+
+        // Set the value of each input field with the corresponding data from userDataRegistrasi using jQuery
+        $("#regnuptk").val(userData.nuptk || "Inputan otomatis dari sistem");
+        $("#regnama").val(userData.nama || "Inputan otomatis dari sistem");
+        $("#regjabatan").val(userDataRegistrasi.jabatan || "Inputan otomatis dari sistem");
+        $("#reginstansi").val(userDataRegistrasi.instansi || "Inputan otomatis dari sistem");
+        $("#regkabupaten").val(userDataRegistrasi.kabupaten || "Inputan otomatis dari sistem");
+
+        $("#regkodeKegiatan").val(userDataRegistrasi.kodeKegiatan || "Inputan otomatis dari sistem");
+        $("#regkegiatan").val(userDataRegistrasi.kegiatan || "Inputan otomatis dari sistem");
+        $("#regsubKegiatan").val(userDataRegistrasi.subKegiatan || "Inputan otomatis dari sistem");
+        $("#regsubTema").val(userDataRegistrasi.subTema || "Inputan otomatis dari sistem");
+      }
+
+      // Fungsi untuk menampilkan data registrasi habis registrasi di halaman (Step 2)
+      function displayUserDataRegistrasiHabisRegistrasi(nama, nuptk, jabatan, instansi, kabupaten, kodeKegiatan, kegiatan, subKegiatan, subTema) {
+
+        $("#nameInput").val(nama); // Nama pengguna
+        $(".uname").text(nama); // Nama pengguna
+        $(".uname").text("Hai kak, " + nama); // Nama pengguna
+
+        generateQRCode(nuptk); // Generate QR code
+
+        // Set the value of each input field with the corresponding data from userDataRegistrasi using jQuery
+        $("#regnuptk").val(nuptk || "Inputan otomatis dari sistem");
+        $("#regnama").val(nama || "Inputan otomatis dari sistem");
+        $("#regjabatan").val(jabatan || "Inputan otomatis dari sistem");
+        $("#reginstansi").val(instansi || "Inputan otomatis dari sistem");
+        $("#regkabupaten").val(kabupaten || "Inputan otomatis dari sistem");
+
+        $("#regkodeKegiatan").val(kodeKegiatan || "Inputan otomatis dari sistem");
+        $("#regkegiatan").val(kegiatan || "Inputan otomatis dari sistem");
+        $("#regsubKegiatan").val(subKegiatan || "Inputan otomatis dari sistem");
+        $("#regsubTema").val(subTema || "Inputan otomatis dari sistem");
+      }
+
+      // Fungsi untuk menampilkan kegiatan yang tersedia di dropdown select
+      function tampilKegiatan(userPertemuan) {
+        // Kosongkan dropdown sebelum diisi
+        $("#pertemuanInput").empty();
+        $("#pertemuanInput").append('<option value="" disabled selected>Pilih pertemuan</option>');
+
+        // Pastikan parameter p tidak undefined dan memiliki properti yang diperlukan
+        if (userPertemuan.id_pertemuan) {
+
+          // Tambahkan pertemuan ke dropdown
+          $("#pertemuanInput").append(
+            `<option value="${userPertemuan.id_pertemuan}">${userPertemuan.nama_pertemuan} (${convertDateToReadableFormat(userPertemuan.tanggal)})</option>`
+          );
+        } else {
+          // alert("Data pertemuan tidak valid");
+        }
+      }
+
+      function convertDateToReadableFormat(dateString) {
+        // Buat objek Date dari string tanggal MySQL
+        var dateObj = new Date(dateString);
+
+        // Daftar bulan dalam bahasa Indonesia
+        var months = [
+          "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+          "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+        ];
+
+        // Dapatkan komponen tanggal, bulan, dan tahun
+        var day = dateObj.getDate();
+        var month = months[dateObj.getMonth()]; // Ambil nama bulan dari array
+        var year = dateObj.getFullYear();
+
+        // Dapatkan komponen waktu (jam, menit, detik)
+        var hours = dateObj.getHours();
+        var minutes = dateObj.getMinutes();
+        var seconds = dateObj.getSeconds();
+
+        // Pastikan jam, menit, detik dalam format dua digit
+        hours = hours < 10 ? '0' + hours : hours;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        // Gabungkan semua bagian menjadi string yang mudah dibaca
+        var formattedDate = day + ' ' + month + ' ' + year;
+
+        return formattedDate;
+      }
+
+      // Fungsi format nomor WhatsApp
+      function formatWhatsApp(number) {
+        // Hapus karakter selain angka
+        number = number.replace(/\D/g, '');
+
+        // Cek apakah nomor dimulai dengan 08
+        if (number.startsWith('08')) {
+          // Ganti 08 dengan 62
+          number = '62' + number.slice(1);
+        } else if (!number.startsWith('62')) {
+          // Jika nomor tidak dimulai dengan 62, tambahkan 62 di depan
+          number = '62' + number;
+        }
+
+        // Kembalikan nomor yang telah diformat
+        return number;
+      }
+
+      // Fungsi untuk menghasilkan QR code
+      function generateQRCode(qrtext) {
+        // Clear the previous QR code
+        $('#qrcode').empty();
+
+        // Get the input text
+        var qrText = qrtext;
+
+        // Generate the QR code with custom styles
+        if (qrText) {
+          var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: qrText,
+            width: 200, // QR code width
+            height: 200, // QR code height            
+            correctLevel: QRCode.CorrectLevel.H // Error correction level
+          });
+
+        }
+      }
+
+      // Fungsi untuk menyimpan beserta tanda tangan
+      function savePresensi(){
+
+        $("#loading").show(); // Tampilkan spinner loading
+        $("#submitFormButton").prop("disabled", true).text("Proses Presensi...");
+
+        const idPegawai = $("#idPegawai").val(); // ID Pegawai
+        const idPertemuan = $("#pertemuanInput").val(); // Kegiatan yang dipilih
+        const tanggal = new Date().toLocaleDateString('id-ID'); // Format tanggal lokal   
+        const tanda_tangan = $("#svgTextArea").val();
+
+        generateQRCode(idPegawai); // Generate QR code
+
+        // Data yang akan dikirim ke sheet `data_kehadiran`
+        const params = {
+          idPegawai: idPegawai,
+          idPertemuan: idPertemuan,
+          tanda_tangan: tanda_tangan
+        };
+
+        // Kirim data menggunakan fetch
+        fetch(url, {
+            redirect: "follow",
+            method: "POST",
+            body: JSON.stringify(params),
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8",
+            },
+          })
+          .then(response => response.json())
+          .then(data => {
+
+            if (data.status === "success") {
+              swal({
+                title: "Presensi Berhasil!",
+                text: "Data kehadiran Anda berhasil disimpan.",
+                icon: "success",
+                button: {
+                  text: "OK",
+                  className: "btn btn-primary"
+                }
+              }).then(() => {
+                // Opsional: lakukan tindakan tambahan setelah presensi berhasil
+                // Misalnya, reset form atau navigasi ke halaman lain
+                $("#loading").hide(); // Sembunyikan spinner loading
+                $("#submitFormButton").prop("disabled", false).text("Presensi sekarang");
+
+                $(".forma").prop("hidden", true);
+                $(".formc").prop("hidden", false);
+
+                swal({
+                  title: "Data Sudah Tercatat",
+                  text: "Kehadiran Anda sudah pernah disimpan.",
+                  icon: "warning",
+                  button: {
+                    text: "Oke",
+                    className: "btn btn-primary"
+                  }
+                });
+
+              });
+            } else if (data.status === "error") {
+              $("#loading").hide(); // Sembunyikan spinner loading
+              $("#submitFormButton").prop("disabled", false).text("Presensi sekarang");
+
+              swal({
+                title: "Gagal Presensi",
+                text: "Gagal menyimpan data kehadiran, silakan coba lagi.",
+                icon: "error",
+                button: {
+                  text: "Coba Lagi",
+                  className: "btn btn-primary"
+                }
+              });
+            } else if (data.status === "duplicate") {
+              $("#loading").hide(); // Sembunyikan spinner loading
+              $("#submitFormButton").prop("disabled", false).text("Presensi sekarang");
+
+              $(".forma").prop("hidden", true);
+              $(".formc").prop("hidden", false);
+
+              swal({
+                title: "Data Sudah Tercatat",
+                text: "Kehadiran Anda sudah pernah disimpan.",
+                icon: "warning",
+                button: {
+                  text: "Oke",
+                  className: "btn btn-primary"
+                }
+              });
+            }
+
+          })
+          .catch(error => {
+
+            $("#loading").hide(); // Tampilkan spinner loading
+            $("#submitFormButton").prop("disabled", false).text("Presensi sekarang");
+
+            swal({
+              title: "Terjadi Kesalahan",
+              text: "Gagal menghubungi server.",
+              icon: "error",
+              button: {
+                text: "OK",
+                className: "btn btn-primary"
+              }
+            });
+
+          });
+
+      }
+
+      $(".pertemuanInput").change(function() {
+          $(".formd").removeAttr("hidden"); // Hapus atribut hidden
+          $("#step2").attr("hidden", true);  // Menambahkan atribut hidden
+
+          // Inisialisasi jSignature jika belum ada
+          
+          $sigdiv = $("#signature").jSignature({
+              'UndoButton': true,  // Tambahkan tombol Undo jika diperlukan
+              'decor-color': '#000000', // Warna untuk signature
+              'color': '#000000'  // Warna tinta signature
+          });
+          
+
+          // Pilih teks dari opsi yang dipilih dalam dropdown
+          var selectedText = $(".pertemuanInput option:selected").text();
+          $(".text-kegiatan").text(selectedText); // Update teks pada elemen .text-kegiatan
+      });
+
+      // Ketika tombol "Sedang diverifikasi" diklik
+      $(".btnDiverifikasi").click(function() {
+        swal({
+          title: "Sedang Diverifikasi",
+          text: "Proses verifikasi pendaftaran kakak sedang berlangsung. Harap tunggu.",
+          icon: "info",
+          button: {
+            text: "Terima kasih, kak!",
+            className: "btn btn-primary"
+          }
+        });
+      });
+
+      // Ketika tombol "Terdaftar / Lulus" diklik
+      $(".btnTerdaftar").click(function() {
+        swal({
+          title: "Terdaftar",
+          text: "Selamat! Kakak telah terdaftar / lulus.",
+          icon: "success",
+          button: {
+            text: "Terima kasih, kak!",
+            className: "btn btn-primary"
+          }
+        });
+      });
+
+      // Ketika tombol "Tidak terdaftar / Tidak Lulus" diklik
+      $(".btnTidakTerdaftar").click(function() {
+        swal({
+          title: "Tidak Terdaftar",
+          text: "Maaf, Kakak tidak terdaftar atau tidak lulus.",
+          icon: "error",
+          button: {
+            text: "Terima kasih, kak!",
+            className: "btn btn-primary"
+          }
+        });
+      });
+
+      // Step 1: Validasi NUPTK
+      $("#checkButton").click(function() {
+
+        $("#loading").show(); // Tampilkan spinner loading
+
+        $("#checkButton").prop("disabled", true).text("Proses Verifikasi...");
+
+        const emailOrPhone = $("#idpeg").val();
+
+        // cek nuptk kosong
+        if (idpeg == "") {
+          swal({
+            title: "Hai, kak!",
+            text: "Inoutan harus lengkap sebelum melanjutkan.",
+            icon: "error",
+            button: {
+              text: "Oke, Siap ka!",
+              className: "btn btn-primary",
+              closeModal: true
+            }
+          });
+          $("#loading").hide(); // Sembunyikan spinner
+          $("#checkButton").prop("disabled", false).text("Verifikasi kembali");
+          return;
+        }
+
+        // Kirim NUPTK ke Google Apps Script untuk validasi        
+        const params = {
+          emailOrPhone: emailOrPhone,
+        };
+
+        // Tampilkan SweetAlert dengan hitung mundur
+        let countdown = 10;
+        swal({
+          title: "Proses Verifikasi",
+          text: `Kami sedang memverifikasi data kakak (Tunggu hingga : ${countdown} detik)`,
+          icon: "info",
+          buttons: false,
+          closeOnClickOutside: false,
+          closeOnEsc: false,
+        });
+
+        // Mulai hitung mundur setiap 1 detik
+        const countdownInterval = setInterval(function() {
+          countdown--;
+          swal({
+            title: "Proses Verifikasi",
+            text: `Kami sedang memverifikasi data kakak (Hingga : ${countdown} detik)`,
+            icon: "info",
+            buttons: false,
+            closeOnClickOutside: false,
+            closeOnEsc: false,
+          });
+
+          // Jika countdown selesai, hentikan interval
+          if (countdown === 0) {
+            clearInterval(countdownInterval);
+
+            // Tampilkan swal dengan tombol Verifikasi Lagi
+            swal({
+              title: "Waktu Habis",
+              text: "Tidak ada respon dari server, coba verifikasi lagi.",
+              icon: "warning",
+              buttons: {
+                retry: {
+                  text: "Verifikasi Lagi",
+                  className: "btn btn-primary", // Bootstrap class
+                  closeModal: true // Tutup swal setelah tombol diklik
+                }
+              }
+            }).then((value) => {
+              if (value === "retry") {
+                // Mulai ulang proses verifikasi ketika tombol diklik
+                $("#checkButton").trigger("click");
+              }
+            });
+          }
+        }, 1000);
+
+        // Menggunakan fetch API untuk mengirim permintaan POST
+        fetch(url, {
+            redirect: "follow",
+            method: "POST",
+            body: JSON.stringify(params),
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8",
+            },
+          })
+          .then((response) => {
+            $("#loading").hide();
+            $("#checkButton").prop("disabled", false).text("Verifikasi kembali");
+
+            clearInterval(countdownInterval);
+
+            if (!response.ok) {
+              throw new Error("Jaringan bermasalah. Coba lagi nanti.");
+            }
+
+            return response.json();
+          })
+          .then((response) => {
+            console.log("Respons dari server:", response);
+
+            // Handling response statuses
+            if (response.status === "invalid") {
+              swal({
+                title: "ID Tidak Terdaftar",
+                text: "Kakak tidak bisa melanjutkan.",
+                icon: "error",
+                button: {
+                  text: "OK",
+                  className: "btn btn-primary",
+                  closeModal: true
+                }
+              }).then(() => {
+                $("#message").text("ID tidak terdaftar. Kakak tidak bisa melanjutkan.").addClass("text-red-500");
+                $("#idpeg").val("");
+              });
+
+            } else if (response.status === "presensed") {
+              // Logika ketika NUPTK sudah terdaftar
+              const userDataRegistrasi = response.userDataRegistrasi;
+              const userData = response.userData;
+
+              displayUserDataRegistrasi(userDataRegistrasi, userData);
+
+              swal({
+                title: "Kakak Sudah Presensi",
+                text: "Kakak sudah melakukan presensi pada pertemuan " + userDataRegistrasi.kegiatan,
+                icon: "warning",
+                button: {
+                  text: "Lihat detail pertemuan",
+                  className: "btn btn-primary",
+                  closeModal: true
+                }
+              }).then(() => {
+                $("#message").text("Kakak sudah terdaftar pada pertemuan.").addClass("text-red-500");
+                $(".forma").prop("hidden", true);
+                $(".formc").prop("hidden", false);
+              });
+
+            } else if (response.status === "valid") {
+              swal({
+                title: "ID Pegawai Valid",
+                text: "Silakan lanjut ke langkah berikutnya.",
+                icon: "success",
+                button: {
+                  text: "Siap, kakak",
+                  className: "btn btn-primary",
+                  closeModal: true
+                }
+              }).then(() => {
+                $("#message").text("ID Pegawai valid. Silakan lanjut ke langkah berikutnya.").removeClass("text-red-500").addClass("text-green-500");
+
+                const userData = response.userData;
+                const userpertemuan = response.userPertemuan;
+
+                // Misalnya, untuk menampilkan nama di halaman
+                $("#idPegawai").val(userData.id_pegawai);
+                $("#namaPegawai").text(userData.nama);
+                $("#nameInput").val(userData.nama);
+                $("#jabatanPegawai").val(userData.jabatan);
+                $("#timjaPegawai").val(userData.timja);
+
+                // Tampilkan data pertemuan di dropdown select
+                tampilKegiatan(userpertemuan);
+
+                // Lanjutkan proses lain
+                displayUserData(userData);
+                currentStep = 2;
+                showStep();
+
+              });
+            }
+          })
+          .catch((error) => {
+            $("#loading").hide();
+            $("#checkButton").prop("disabled", false).text("Verifikasi Kembali");
+
+            clearInterval(countdownInterval);
+
+            console.log("Error details:", error);
+
+            let errorMessage = "Tidak bisa terhubung ke server. Periksa koneksi internet Anda.";
+            if (error.message.includes("Jaringan bermasalah")) {
+              errorMessage = "Tidak bisa terhubung ke server. Periksa koneksi internet Anda.";
+            }
+
+            swal({
+              title: "Internet kakak bermasalah",
+              text: errorMessage,
+              icon: "error",
+              button: {
+                text: "Siap, kak!",
+                className: "btn btn-primary",
+                closeModal: true
+              }
+            });
+
+            $("#message").text(errorMessage).addClass("text-red-500");
+          });
+      });
+
+      // Step 3: Daftar kegiatan
+      $("#submitFormButton").click(function() {
+        //nothing
+      });
+    });
+  </script>
+
+  <style>
+    /* Stepper container */
+    #stepper {
+      display: flex;
+      /* Mengatur elemen anak agar berada dalam satu baris */
+      justify-content: center;
+      /* Memusatkan elemen */
+      list-style-type: none;
+      /* Menghilangkan bullet points */
+      padding: 0;
+    }
+
+    /* Stepper items */
+    #stepper .nav-item {
+      margin: 2px;
+      /* Memberikan jarak antar elemen */
+    }
+
+    /* Style untuk tautan stepper */
+    #stepper .nav-link {
+      display: inline-flex;
+      /* Agar ikon dan teks berada dalam satu baris */
+      align-items: center;
+      /* Mengatur ikon dan teks sejajar secara vertikal */
+      padding: 5px 10px;
+      border-radius: 5px;
+      background-color: #007bff;
+      /* Warna latar belakang */
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Menyesuaikan ukuran ikon */
+    #stepper .nav-link svg {
+      margin-right: 2px;
+      /* Memberikan jarak antara ikon dan teks */
+    }
+
+    /* Style untuk tautan yang disabled */
+    #stepper .nav-link.disabled {
+      background-color: #6c757d;
+      cursor: not-allowed;
+    }
+
+    /* Style untuk tautan stepper */
+    #stepper .nav-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      font-size: 9px;
+      /* Ukuran font diperkecil */
+    }
+
+    /* Menyesuaikan ukuran ikon */
+    #stepper .nav-link svg {
+      margin-right: 8px;
+      width: 14px;
+      /* Ukuran ikon diperkecil */
+      height: 14px;
+      /* Ukuran ikon diperkecil */
+    }
+  </style>
+
+</head>
+
+<body class="bg-primary mx-auto p-2 mt-3" style="width: 990px;">
+
+  <!-- HTML -->
+  <div class="header-container container mb-3 d-flex align-items-center justify-content-between w-75">
+
+    <!-- Avatar Bundar di Kiri -->
+    <div class="d-flex align-items-center">
+      <div class="icon-container me-2 border border-2 border-light rounded-circle">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Logo_of_Ministry_of_Education_and_Culture_of_Republic_of_Indonesia.svg/800px-Logo_of_Ministry_of_Education_and_Culture_of_Republic_of_Indonesia.svg.png" class="rounded-circle avimg" alt="Avatar" width="50">
+      </div>
+
+      <!-- Teks "Hai, Nama" di Sebelah Avatar -->
+      <div class="text-start">
+        <span class="badge text-bg-light uname">Selamat datang, Bapak/Ibu</span>
+      </div>
+    </div>
+
+    <!-- Tombol Scan QR di Pojok Kanan -->
+    <div class="text-end">
+      
+      <a target="_blank" href="https://bbgpjateng.kemdikbud.go.id/">
+        <img src="https://i.ibb.co.com/xf7zM5g/TULISAN-BBGP-3-1.png" class="mt-4 mb-1" width="150px" alt="bbgpjateng" border="0">
+      </a>
+    </div>
+
+  </div>
+
+  <div class="container p-5 bg-light rounded shadow forma w-75">
+
+    <h1 class="fw-bold h3 text-dark lead">Rapat Koordinasi Internal Ditjen GTKPG (Rapim B) Tahap I Tahun 2025</h1>
+    <h6 class="mb-5">Bertempat di Balai Besar Guru Penggerak Provinsi Jawa Tengah</h6>
+
+    <input type="text" id="kodeKegiatanInput" hidden>
+
+    <!-- Stepper -->
+    <ul hidden class="nav nav-pills mb-4" id="stepper">
+      <li class="nav-item">
+        <a class=" nav-link active fw-bold text-white" id="step1Link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+            <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708" />
+          </svg>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active fw-bold text-white h6" id="step2Link" href="#" tabindex="-1" aria-disabled="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
+            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6m5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1z" />
+          </svg>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active fw-bold text-white h6" id="step3Link" href="#" tabindex="-1" aria-disabled="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
+            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6m5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1z" />
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Step 1: Input NUPTK -->
+    <div id="step0">
+      <p id="message" class="mt-3"></p>
+      <div id="loading" class="text-muted mt-2"></div>
+    </div>
+
+    <!-- Step 2: Tampilkan data pengguna dalam bentuk input -->
+    <div id="step1" class="text-left" style="display: none">
+
+      <input type="text" hidden id="idPegawai">
+
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="nameInput" placeholder="Nama Lengkap" value="">
+        <label for="nameInput">Nama Lengkap</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control text-left" id="instansiPegawai" placeholder="Instansi" value="">
+        <label for="instansiPegawai">Instansi</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="jabatanPegawai" placeholder="Jabatan" value="">
+        <label for="jabatanInput">Jabatan</label>
+      </div>
+
+      <hr>
+
+      <div class="form-floating">
+        <select id="pertemuanInput" class="form-select pertemuanInput" aria-label="Pilih Pertemuan">
+          <option value="" disabled selected>Pilih Pertemuan</option>
+        </select>
+        <label for="pertemuanInput">Pilih pertemuan yang tersedia saat ini</label>
+      </div>     
+
+    </div>
+
+    <div class="formd mt-3" hidden>
+
+      <div class="container bg-white p-5 rounded border border-primary">
+        <h1 class="fw-bold h3 text-dark lead">Tanda Tangan</h1>
+        <p class="text-kegiatan"></p>
+        <div id="signature"></div>
+        
+        <div hidden id="someelement"></div>
+        <textarea hidden id="svgTextArea" rows="10" cols="50"></textarea>
+
+      </div>
+
+      <button class="btn btn-outline-primary mr-5 fw-bold mt-3" id="clear">Ulangi</button>
+      <button class="btn btn-primary fw-bold mt-3" id="save">Simpan dan Presensi</button>
+
+     </div>
+     
+
+  </div>
+
+  <div class="formc" hidden>
+
+    <div class="container cetakboardingpass bg-white p-5 rounded shadow">
+      <h1 class="mb-4 fw-bold">Status Kehadiran</h1>
+      <p class="lead">Kegiatan BBGP Provinsi Jawa Tengah.</p>
+
+      <center>
+        <div id="qrcode"></div>
+        <button class="btnTerdaftar btn btn-success rounded-pill mt-3 fw-bold">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+          </svg> Tercatat
+        </button>
+        <div class="alert alert-success mt-2 alrl" role="alert">
+          <strong>Selamat!</strong> Kakak telah tercatat peserta kegiatan.
+        </div>
+      </center>
+    </div>
+
+  </div>
+
+  <!-- Gambar di kiri -->
+  <a target="_blank" href="https://bbgpjateng.kemdikbud.go.id/">
+    <img src="https://i.ibb.co.com/jv7B0Cjg/kami-siap-zi-wbk1.png" class="mt-4 mb-1" width="180px" alt="bbgpjateng" border="0" alt="kami-siap-zi-wbk1" border="0">
+  </a>
+  <br>
+
+  <small class="mt-2 mb-5 text-white" style="font-size: 10px;">Balai Besar Guru Penggerak Jawa Tengah &copy; 2024 <br> Tata Laksana Kepegawaian dan Persuratan</small>
+
+</body>
+
+</html>
